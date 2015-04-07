@@ -1,0 +1,8 @@
+D:\SeavusDotNetTraining\bankSystemEx\BankSystemExample\bin\TestConfig\BankSystemExample.exe.config
+D:\SeavusDotNetTraining\bankSystemEx\BankSystemExample\bin\TestConfig\BankSystemExample.exe
+D:\SeavusDotNetTraining\bankSystemEx\BankSystemExample\bin\TestConfig\BankSystemExample.pdb
+D:\SeavusDotNetTraining\bankSystemEx\BankSystemExample\obj\TestConfig\BankSystemExample.csprojResolveAssemblyReference.cache
+D:\SeavusDotNetTraining\bankSystemEx\BankSystemExample\obj\TestConfig\BankSystemExample.Properties.Resources.resources
+D:\SeavusDotNetTraining\bankSystemEx\BankSystemExample\obj\TestConfig\BankSystemExample.csproj.GenerateResource.Cache
+D:\SeavusDotNetTraining\bankSystemEx\BankSystemExample\obj\TestConfig\BankSystemExample.exe
+D:\SeavusDotNetTraining\bankSystemEx\BankSystemExample\obj\TestConfig\BankSystemExample.pdb
