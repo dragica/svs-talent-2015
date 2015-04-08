@@ -1,0 +1,5 @@
+D:\SeavusDotNetTraining\bankSystemEx\Models\bin\TestConfig\Models.dll
+D:\SeavusDotNetTraining\bankSystemEx\Models\bin\TestConfig\Models.pdb
+D:\SeavusDotNetTraining\bankSystemEx\Models\obj\TestConfig\Models.csprojResolveAssemblyReference.cache
+D:\SeavusDotNetTraining\bankSystemEx\Models\obj\TestConfig\Models.dll
+D:\SeavusDotNetTraining\bankSystemEx\Models\obj\TestConfig\Models.pdb

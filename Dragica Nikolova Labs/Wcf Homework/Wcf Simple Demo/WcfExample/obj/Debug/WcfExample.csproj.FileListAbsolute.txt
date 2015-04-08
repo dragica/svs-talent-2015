@@ -1,0 +1,6 @@
+D:\SeavusDotNetTraining\WcfExample\WcfExample\bin\Debug\WcfExample.dll.config
+D:\SeavusDotNetTraining\WcfExample\WcfExample\bin\Debug\WcfExample.dll
+D:\SeavusDotNetTraining\WcfExample\WcfExample\bin\Debug\WcfExample.pdb
+D:\SeavusDotNetTraining\WcfExample\WcfExample\obj\Debug\WcfExample.csprojResolveAssemblyReference.cache
+D:\SeavusDotNetTraining\WcfExample\WcfExample\obj\Debug\WcfExample.dll
+D:\SeavusDotNetTraining\WcfExample\WcfExample\obj\Debug\WcfExample.pdb
