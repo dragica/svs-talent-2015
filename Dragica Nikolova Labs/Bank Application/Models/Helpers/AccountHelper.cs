@@ -24,10 +24,10 @@ namespace Models.Helpers
         {
             string accountNumber;
             if (accountType == typeof(TransactionAccount))
-                accountNumber = "TR0000AccountId";
+                accountNumber = "TR0000" + Convert.ToString(s_AccountId);
             else if (accountType == typeof(DepositAccount))
-                accountNumber = "DP0000AccountId";
-            else accountNumber = "LN0000AccountId";
+                accountNumber = "DP0000" + Convert.ToString(s_AccountId);
+            else accountNumber = "LN0000" + Convert.ToString(s_AccountId);
             return accountNumber;
         }
 

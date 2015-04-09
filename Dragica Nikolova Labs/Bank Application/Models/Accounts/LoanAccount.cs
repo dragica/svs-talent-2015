@@ -38,12 +38,6 @@ namespace Models.Accounts
             return TransactionStatus.Failed;
         }
 
-        private LoanAccount CreateLoanAccount(TimePeriod depositPeriod, InterestRate interestRate, DateTime startDate, DateTime endDate, ITransactionAccount transactionAccount, string currency)
-        {
-            LoanAccount loanAccount = new LoanAccount(depositPeriod, interestRate, startDate, endDate, transactionAccount, currency);
-            return loanAccount;
-        }
-
         protected override string GenerateAccountNumber()
         {
             string accountNumber = AccountHelper.GenerateAccountNumber(typeof(LoanAccount), this.Id);

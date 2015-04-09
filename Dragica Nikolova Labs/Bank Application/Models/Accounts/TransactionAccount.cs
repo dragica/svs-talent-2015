@@ -13,8 +13,7 @@ namespace Models.Accounts
     {
         public CurrencyAmount Limit { get; private set; }
 
-        public TransactionAccount(decimal limitAmount, string currency)
-            : base(currency)
+        public TransactionAccount(decimal limitAmount, string currency) : base(currency)
         {
             CurrencyAmount limit = new CurrencyAmount() { Amount = limitAmount, Currency = currency};            
             this.Limit = limit;

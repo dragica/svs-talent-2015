@@ -82,19 +82,20 @@ namespace Models.Accounts
         }
         
         /// <summary>
-        ///A constructor with one parameter that invokes the constructor with three parameters, giving default values for id and number.
+        ///A constructor with one parameter that specifies currency.
         /// </summary>
         /// <param name="currency">An account currency type</param>
-        public Account(string currency) //: this(currency) 
+        public Account(string currency) 
         {
             this.Id = AccountHelper.GenerateAccountId();
+            this.Number = this.GenerateAccountNumber();
             this.Currency = currency;
             CurrencyAmount b = new CurrencyAmount() { Amount = 0, Currency = currency };
-            this.Balance = b;
-            this.Number = this.GenerateAccountNumber();           
+            this.Balance = b;                       
         }
         
         #region Public Methods
+
         /// <summary>
         /// Decreases the balance only if the currency of the specified amount and the account currency are the same.
         /// </summary>
@@ -109,6 +110,7 @@ namespace Models.Accounts
             }
             return TransactionStatus.Failed;
         }
+
         /// <summary>
         /// Increases the balance only if the currency of the specified amount and the account currency are the same.
         /// </summary>

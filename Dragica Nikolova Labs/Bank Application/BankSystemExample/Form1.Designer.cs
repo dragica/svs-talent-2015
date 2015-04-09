@@ -40,7 +40,7 @@
             this.txtPeriod = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtPercent = new System.Windows.Forms.TextBox();
+            this.txtInterest = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
@@ -51,12 +51,12 @@
             this.lblCurrency = new System.Windows.Forms.Label();
             this.lblBalance = new System.Windows.Forms.Label();
             this.lblLimitCurrency = new System.Windows.Forms.Label();
-            this.lblStart = new System.Windows.Forms.Label();
-            this.lblEnd = new System.Windows.Forms.Label();
+            this.lblStartDate = new System.Windows.Forms.Label();
+            this.lblEndDate = new System.Windows.Forms.Label();
             this.lblPeriodUnitOfTime = new System.Windows.Forms.Label();
             this.lblPercentUnitOfTime = new System.Windows.Forms.Label();
-            this.cbStartDate = new System.Windows.Forms.ComboBox();
-            this.cbEndDate = new System.Windows.Forms.ComboBox();
+            this.cbPeriodUnitOfTime = new System.Windows.Forms.ComboBox();
+            this.cbInterestUnitOfTime = new System.Windows.Forms.ComboBox();
             this.lblDisplayId = new System.Windows.Forms.Label();
             this.lblDisplayNumber = new System.Windows.Forms.Label();
             this.lblDisplayCurrency = new System.Windows.Forms.Label();
@@ -89,6 +89,11 @@
             this.lbl_ToId = new System.Windows.Forms.Label();
             this.btnMakeTransaction = new System.Windows.Forms.Button();
             this.lbl_ToDetails = new System.Windows.Forms.Label();
+            this.btnMakeGroupTransaction = new System.Windows.Forms.Button();
+            this.lblTotalTransactionCount = new System.Windows.Forms.Label();
+            this.lblTransactionType = new System.Windows.Forms.Label();
+            this.lblAmount = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCreateTransactionAccount
@@ -199,12 +204,12 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Interest rate:";
             // 
-            // txtPercent
+            // txtInterest
             // 
-            this.txtPercent.Location = new System.Drawing.Point(350, 73);
-            this.txtPercent.Name = "txtPercent";
-            this.txtPercent.Size = new System.Drawing.Size(60, 20);
-            this.txtPercent.TabIndex = 13;
+            this.txtInterest.Location = new System.Drawing.Point(350, 73);
+            this.txtInterest.Name = "txtInterest";
+            this.txtInterest.Size = new System.Drawing.Size(60, 20);
+            this.txtInterest.TabIndex = 13;
             // 
             // label8
             // 
@@ -287,21 +292,21 @@
             this.lblLimitCurrency.Size = new System.Drawing.Size(0, 13);
             this.lblLimitCurrency.TabIndex = 25;
             // 
-            // lblStart
+            // lblStartDate
             // 
-            this.lblStart.AutoSize = true;
-            this.lblStart.Location = new System.Drawing.Point(351, 311);
-            this.lblStart.Name = "lblStart";
-            this.lblStart.Size = new System.Drawing.Size(0, 13);
-            this.lblStart.TabIndex = 28;
+            this.lblStartDate.AutoSize = true;
+            this.lblStartDate.Location = new System.Drawing.Point(351, 311);
+            this.lblStartDate.Name = "lblStartDate";
+            this.lblStartDate.Size = new System.Drawing.Size(0, 13);
+            this.lblStartDate.TabIndex = 28;
             // 
-            // lblEnd
+            // lblEndDate
             // 
-            this.lblEnd.AutoSize = true;
-            this.lblEnd.Location = new System.Drawing.Point(345, 340);
-            this.lblEnd.Name = "lblEnd";
-            this.lblEnd.Size = new System.Drawing.Size(0, 13);
-            this.lblEnd.TabIndex = 29;
+            this.lblEndDate.AutoSize = true;
+            this.lblEndDate.Location = new System.Drawing.Point(345, 340);
+            this.lblEndDate.Name = "lblEndDate";
+            this.lblEndDate.Size = new System.Drawing.Size(0, 13);
+            this.lblEndDate.TabIndex = 29;
             // 
             // lblPeriodUnitOfTime
             // 
@@ -319,29 +324,29 @@
             this.lblPercentUnitOfTime.Size = new System.Drawing.Size(0, 13);
             this.lblPercentUnitOfTime.TabIndex = 31;
             // 
-            // cbStartDate
+            // cbPeriodUnitOfTime
             // 
-            this.cbStartDate.FormattingEnabled = true;
-            this.cbStartDate.Items.AddRange(new object[] {
+            this.cbPeriodUnitOfTime.FormattingEnabled = true;
+            this.cbPeriodUnitOfTime.Items.AddRange(new object[] {
             "Day",
             "Month",
             "Year"});
-            this.cbStartDate.Location = new System.Drawing.Point(578, 43);
-            this.cbStartDate.Name = "cbStartDate";
-            this.cbStartDate.Size = new System.Drawing.Size(66, 21);
-            this.cbStartDate.TabIndex = 32;
+            this.cbPeriodUnitOfTime.Location = new System.Drawing.Point(578, 43);
+            this.cbPeriodUnitOfTime.Name = "cbPeriodUnitOfTime";
+            this.cbPeriodUnitOfTime.Size = new System.Drawing.Size(66, 21);
+            this.cbPeriodUnitOfTime.TabIndex = 32;
             // 
-            // cbEndDate
+            // cbInterestUnitOfTime
             // 
-            this.cbEndDate.FormattingEnabled = true;
-            this.cbEndDate.Items.AddRange(new object[] {
+            this.cbInterestUnitOfTime.FormattingEnabled = true;
+            this.cbInterestUnitOfTime.Items.AddRange(new object[] {
             "Day",
             "Month",
             "Year"});
-            this.cbEndDate.Location = new System.Drawing.Point(594, 72);
-            this.cbEndDate.Name = "cbEndDate";
-            this.cbEndDate.Size = new System.Drawing.Size(64, 21);
-            this.cbEndDate.TabIndex = 33;
+            this.cbInterestUnitOfTime.Location = new System.Drawing.Point(594, 72);
+            this.cbInterestUnitOfTime.Name = "cbInterestUnitOfTime";
+            this.cbInterestUnitOfTime.Size = new System.Drawing.Size(64, 21);
+            this.cbInterestUnitOfTime.TabIndex = 33;
             // 
             // lblDisplayId
             // 
@@ -449,45 +454,41 @@
             // 
             this.lbl_DisplayToEndDate.AutoSize = true;
             this.lbl_DisplayToEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbl_DisplayToEndDate.Location = new System.Drawing.Point(275, 555);
+            this.lbl_DisplayToEndDate.Location = new System.Drawing.Point(280, 580);
             this.lbl_DisplayToEndDate.Name = "lbl_DisplayToEndDate";
             this.lbl_DisplayToEndDate.Size = new System.Drawing.Size(64, 13);
             this.lbl_DisplayToEndDate.TabIndex = 64;
             this.lbl_DisplayToEndDate.Text = "End Date:";
-            this.lbl_DisplayToEndDate.Visible = false;
             // 
             // lbl_DisplayToStartDate
             // 
             this.lbl_DisplayToStartDate.AutoSize = true;
             this.lbl_DisplayToStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbl_DisplayToStartDate.Location = new System.Drawing.Point(276, 526);
+            this.lbl_DisplayToStartDate.Location = new System.Drawing.Point(281, 551);
             this.lbl_DisplayToStartDate.Name = "lbl_DisplayToStartDate";
             this.lbl_DisplayToStartDate.Size = new System.Drawing.Size(69, 13);
             this.lbl_DisplayToStartDate.TabIndex = 63;
             this.lbl_DisplayToStartDate.Text = "Start Date:";
-            this.lbl_DisplayToStartDate.Visible = false;
             // 
             // lbl_DisplayToInterest
             // 
             this.lbl_DisplayToInterest.AutoSize = true;
             this.lbl_DisplayToInterest.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbl_DisplayToInterest.Location = new System.Drawing.Point(275, 501);
+            this.lbl_DisplayToInterest.Location = new System.Drawing.Point(280, 526);
             this.lbl_DisplayToInterest.Name = "lbl_DisplayToInterest";
             this.lbl_DisplayToInterest.Size = new System.Drawing.Size(85, 13);
             this.lbl_DisplayToInterest.TabIndex = 62;
             this.lbl_DisplayToInterest.Text = "Interest Rate:";
-            this.lbl_DisplayToInterest.Visible = false;
             // 
             // lbl_DisplayToPeriod
             // 
             this.lbl_DisplayToPeriod.AutoSize = true;
             this.lbl_DisplayToPeriod.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbl_DisplayToPeriod.Location = new System.Drawing.Point(275, 477);
+            this.lbl_DisplayToPeriod.Location = new System.Drawing.Point(280, 502);
             this.lbl_DisplayToPeriod.Name = "lbl_DisplayToPeriod";
             this.lbl_DisplayToPeriod.Size = new System.Drawing.Size(99, 13);
             this.lbl_DisplayToPeriod.TabIndex = 61;
             this.lbl_DisplayToPeriod.Text = "Period Duration:";
-            this.lbl_DisplayToPeriod.Visible = false;
             // 
             // lbl_DisplayToLimit
             // 
@@ -498,7 +499,6 @@
             this.lbl_DisplayToLimit.Size = new System.Drawing.Size(83, 13);
             this.lbl_DisplayToLimit.TabIndex = 60;
             this.lbl_DisplayToLimit.Text = "Limit Amount:";
-            this.lbl_DisplayToLimit.Visible = false;
             // 
             // lbl_DisplayToBalance
             // 
@@ -509,7 +509,6 @@
             this.lbl_DisplayToBalance.Size = new System.Drawing.Size(57, 13);
             this.lbl_DisplayToBalance.TabIndex = 59;
             this.lbl_DisplayToBalance.Text = "Balance:";
-            this.lbl_DisplayToBalance.Visible = false;
             // 
             // lbl_DisplayToCurrency
             // 
@@ -520,7 +519,6 @@
             this.lbl_DisplayToCurrency.Size = new System.Drawing.Size(61, 13);
             this.lbl_DisplayToCurrency.TabIndex = 58;
             this.lbl_DisplayToCurrency.Text = "Currency:";
-            this.lbl_DisplayToCurrency.Visible = false;
             // 
             // lbl_DisplayToNumber
             // 
@@ -531,7 +529,6 @@
             this.lbl_DisplayToNumber.Size = new System.Drawing.Size(54, 13);
             this.lbl_DisplayToNumber.TabIndex = 57;
             this.lbl_DisplayToNumber.Text = "Number:";
-            this.lbl_DisplayToNumber.Visible = false;
             // 
             // lbl_DisplayToId
             // 
@@ -542,7 +539,6 @@
             this.lbl_DisplayToId.Size = new System.Drawing.Size(28, 13);
             this.lbl_DisplayToId.TabIndex = 56;
             this.lbl_DisplayToId.Text = " ID:";
-            this.lbl_DisplayToId.Visible = false;
             // 
             // label20
             // 
@@ -563,92 +559,74 @@
             // lbl_ToEndDate
             // 
             this.lbl_ToEndDate.AutoSize = true;
-            this.lbl_ToEndDate.Location = new System.Drawing.Point(345, 555);
+            this.lbl_ToEndDate.Location = new System.Drawing.Point(350, 580);
             this.lbl_ToEndDate.Name = "lbl_ToEndDate";
-            this.lbl_ToEndDate.Size = new System.Drawing.Size(78, 13);
+            this.lbl_ToEndDate.Size = new System.Drawing.Size(0, 13);
             this.lbl_ToEndDate.TabIndex = 53;
-            this.lbl_ToEndDate.Text = "lbl_ToEndDate";
-            this.lbl_ToEndDate.Visible = false;
             // 
             // lbl_ToStartDate
             // 
             this.lbl_ToStartDate.AutoSize = true;
-            this.lbl_ToStartDate.Location = new System.Drawing.Point(351, 526);
+            this.lbl_ToStartDate.Location = new System.Drawing.Point(356, 551);
             this.lbl_ToStartDate.Name = "lbl_ToStartDate";
-            this.lbl_ToStartDate.Size = new System.Drawing.Size(81, 13);
+            this.lbl_ToStartDate.Size = new System.Drawing.Size(0, 13);
             this.lbl_ToStartDate.TabIndex = 52;
-            this.lbl_ToStartDate.Text = "lbl_ToStartDate";
-            this.lbl_ToStartDate.Visible = false;
             // 
             // lbl_ToInterest
             // 
             this.lbl_ToInterest.AutoSize = true;
-            this.lbl_ToInterest.Location = new System.Drawing.Point(366, 501);
+            this.lbl_ToInterest.Location = new System.Drawing.Point(371, 526);
             this.lbl_ToInterest.Name = "lbl_ToInterest";
-            this.lbl_ToInterest.Size = new System.Drawing.Size(71, 13);
+            this.lbl_ToInterest.Size = new System.Drawing.Size(0, 13);
             this.lbl_ToInterest.TabIndex = 51;
-            this.lbl_ToInterest.Text = "lbl_ToInterest";
-            this.lbl_ToInterest.Visible = false;
             // 
             // lbl_ToPeriod
             // 
             this.lbl_ToPeriod.AutoSize = true;
-            this.lbl_ToPeriod.Location = new System.Drawing.Point(376, 477);
+            this.lbl_ToPeriod.Location = new System.Drawing.Point(379, 501);
             this.lbl_ToPeriod.Name = "lbl_ToPeriod";
-            this.lbl_ToPeriod.Size = new System.Drawing.Size(66, 13);
+            this.lbl_ToPeriod.Size = new System.Drawing.Size(0, 13);
             this.lbl_ToPeriod.TabIndex = 50;
-            this.lbl_ToPeriod.Text = "lbl_ToPeriod";
-            this.lbl_ToPeriod.Visible = false;
             // 
             // lbl_ToLimit
             // 
             this.lbl_ToLimit.AutoSize = true;
             this.lbl_ToLimit.Location = new System.Drawing.Point(116, 582);
             this.lbl_ToLimit.Name = "lbl_ToLimit";
-            this.lbl_ToLimit.Size = new System.Drawing.Size(57, 13);
+            this.lbl_ToLimit.Size = new System.Drawing.Size(0, 13);
             this.lbl_ToLimit.TabIndex = 48;
-            this.lbl_ToLimit.Text = "lbl_ToLimit";
-            this.lbl_ToLimit.Visible = false;
             // 
             // lbl_ToBalance
             // 
             this.lbl_ToBalance.AutoSize = true;
             this.lbl_ToBalance.Location = new System.Drawing.Point(98, 555);
             this.lbl_ToBalance.Name = "lbl_ToBalance";
-            this.lbl_ToBalance.Size = new System.Drawing.Size(75, 13);
+            this.lbl_ToBalance.Size = new System.Drawing.Size(0, 13);
             this.lbl_ToBalance.TabIndex = 47;
-            this.lbl_ToBalance.Text = "lbl_ToBalance";
-            this.lbl_ToBalance.Visible = false;
             // 
             // lbl_ToCurrency
             // 
             this.lbl_ToCurrency.AutoSize = true;
             this.lbl_ToCurrency.Location = new System.Drawing.Point(95, 526);
             this.lbl_ToCurrency.Name = "lbl_ToCurrency";
-            this.lbl_ToCurrency.Size = new System.Drawing.Size(78, 13);
+            this.lbl_ToCurrency.Size = new System.Drawing.Size(0, 13);
             this.lbl_ToCurrency.TabIndex = 46;
-            this.lbl_ToCurrency.Text = "lbl_ToCurrency";
-            this.lbl_ToCurrency.Visible = false;
             // 
             // lbl_ToNumber
             // 
             this.lbl_ToNumber.AutoSize = true;
             this.lbl_ToNumber.Location = new System.Drawing.Point(88, 501);
             this.lbl_ToNumber.Name = "lbl_ToNumber";
-            this.lbl_ToNumber.Size = new System.Drawing.Size(73, 13);
+            this.lbl_ToNumber.Size = new System.Drawing.Size(0, 13);
             this.lbl_ToNumber.TabIndex = 45;
-            this.lbl_ToNumber.Text = "lbl_ToNumber";
-            this.lbl_ToNumber.Visible = false;
             // 
             // lbl_ToId
             // 
             this.lbl_ToId.AutoSize = true;
             this.lbl_ToId.Location = new System.Drawing.Point(71, 478);
             this.lbl_ToId.Name = "lbl_ToId";
-            this.lbl_ToId.Size = new System.Drawing.Size(45, 13);
+            this.lbl_ToId.Size = new System.Drawing.Size(0, 13);
             this.lbl_ToId.TabIndex = 44;
-            this.lbl_ToId.Text = "lbl_ToId";
-            this.lbl_ToId.Visible = false;
             // 
             // btnMakeTransaction
             // 
@@ -670,13 +648,62 @@
             this.lbl_ToDetails.Size = new System.Drawing.Size(48, 15);
             this.lbl_ToDetails.TabIndex = 66;
             this.lbl_ToDetails.Text = "Details:";
-            this.lbl_ToDetails.Visible = false;
+            // 
+            // btnMakeGroupTransaction
+            // 
+            this.btnMakeGroupTransaction.Location = new System.Drawing.Point(274, 399);
+            this.btnMakeGroupTransaction.Name = "btnMakeGroupTransaction";
+            this.btnMakeGroupTransaction.Size = new System.Drawing.Size(153, 24);
+            this.btnMakeGroupTransaction.TabIndex = 67;
+            this.btnMakeGroupTransaction.Text = "Make Group Transaction";
+            this.btnMakeGroupTransaction.UseVisualStyleBackColor = true;
+            this.btnMakeGroupTransaction.Click += new System.EventHandler(this.btnMakeGroupTransaction_Click);
+            // 
+            // lblTotalTransactionCount
+            // 
+            this.lblTotalTransactionCount.AutoSize = true;
+            this.lblTotalTransactionCount.Location = new System.Drawing.Point(498, 405);
+            this.lblTotalTransactionCount.Name = "lblTotalTransactionCount";
+            this.lblTotalTransactionCount.Size = new System.Drawing.Size(0, 13);
+            this.lblTotalTransactionCount.TabIndex = 68;
+            // 
+            // lblTransactionType
+            // 
+            this.lblTransactionType.AutoSize = true;
+            this.lblTransactionType.Location = new System.Drawing.Point(603, 404);
+            this.lblTransactionType.Name = "lblTransactionType";
+            this.lblTransactionType.Size = new System.Drawing.Size(41, 13);
+            this.lblTransactionType.TabIndex = 69;
+            this.lblTransactionType.Text = "label12";
+            // 
+            // lblAmount
+            // 
+            this.lblAmount.AutoSize = true;
+            this.lblAmount.Location = new System.Drawing.Point(606, 431);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(41, 13);
+            this.lblAmount.TabIndex = 70;
+            this.lblAmount.Text = "label11";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(606, 457);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(41, 13);
+            this.lblStatus.TabIndex = 72;
+            this.lblStatus.Text = "label11";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 618);
+            this.ClientSize = new System.Drawing.Size(708, 661);
+            this.Controls.Add(this.lblStatus);
+            this.Controls.Add(this.lblAmount);
+            this.Controls.Add(this.lblTransactionType);
+            this.Controls.Add(this.lblTotalTransactionCount);
+            this.Controls.Add(this.btnMakeGroupTransaction);
             this.Controls.Add(this.lbl_ToDetails);
             this.Controls.Add(this.btnMakeTransaction);
             this.Controls.Add(this.lbl_DisplayToEndDate);
@@ -709,12 +736,12 @@
             this.Controls.Add(this.lblDisplayCurrency);
             this.Controls.Add(this.lblDisplayNumber);
             this.Controls.Add(this.lblDisplayId);
-            this.Controls.Add(this.cbEndDate);
-            this.Controls.Add(this.cbStartDate);
+            this.Controls.Add(this.cbInterestUnitOfTime);
+            this.Controls.Add(this.cbPeriodUnitOfTime);
             this.Controls.Add(this.lblPercentUnitOfTime);
             this.Controls.Add(this.lblPeriodUnitOfTime);
-            this.Controls.Add(this.lblEnd);
-            this.Controls.Add(this.lblStart);
+            this.Controls.Add(this.lblEndDate);
+            this.Controls.Add(this.lblStartDate);
             this.Controls.Add(this.lblLimitCurrency);
             this.Controls.Add(this.lblBalance);
             this.Controls.Add(this.lblCurrency);
@@ -725,7 +752,7 @@
             this.Controls.Add(this.dtpStartDate);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtPercent);
+            this.Controls.Add(this.txtInterest);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtPeriod);
@@ -759,7 +786,7 @@
         private System.Windows.Forms.TextBox txtPeriod;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtPercent;
+        private System.Windows.Forms.TextBox txtInterest;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtpStartDate;
@@ -770,12 +797,12 @@
         private System.Windows.Forms.Label lblCurrency;
         private System.Windows.Forms.Label lblBalance;
         private System.Windows.Forms.Label lblLimitCurrency;
-        private System.Windows.Forms.Label lblStart;
-        private System.Windows.Forms.Label lblEnd;
+        private System.Windows.Forms.Label lblStartDate;
+        private System.Windows.Forms.Label lblEndDate;
         private System.Windows.Forms.Label lblPeriodUnitOfTime;
         private System.Windows.Forms.Label lblPercentUnitOfTime;
-        private System.Windows.Forms.ComboBox cbStartDate;
-        private System.Windows.Forms.ComboBox cbEndDate;
+        private System.Windows.Forms.ComboBox cbPeriodUnitOfTime;
+        private System.Windows.Forms.ComboBox cbInterestUnitOfTime;
         private System.Windows.Forms.Label lblDisplayId;
         private System.Windows.Forms.Label lblDisplayNumber;
         private System.Windows.Forms.Label lblDisplayCurrency;
@@ -808,6 +835,11 @@
         private System.Windows.Forms.Label lbl_ToId;
         private System.Windows.Forms.Button btnMakeTransaction;
         private System.Windows.Forms.Label lbl_ToDetails;
+        private System.Windows.Forms.Button btnMakeGroupTransaction;
+        private System.Windows.Forms.Label lblTotalTransactionCount;
+        private System.Windows.Forms.Label lblTransactionType;
+        private System.Windows.Forms.Label lblAmount;
+        private System.Windows.Forms.Label lblStatus;
     }
 }
 

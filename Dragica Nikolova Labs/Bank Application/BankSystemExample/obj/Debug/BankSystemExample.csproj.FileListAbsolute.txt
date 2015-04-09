@@ -53,3 +53,14 @@ D:\SeavusDotNetTraining\svs-talent-2015\Dragica Nikolova Labs\BankSystemExample\
 D:\SeavusDotNetTraining\svs-talent-2015\Dragica Nikolova Labs\BankSystemExample\obj\Debug\BankSystemExample.frmMain.resources
 D:\SeavusDotNetTraining\svs-talent-2015\Dragica Nikolova Labs\BankSystemExample\obj\Debug\BankSystemExample.Properties.Resources.resources
 D:\SeavusDotNetTraining\svs-talent-2015\Dragica Nikolova Labs\BankSystemExample\obj\Debug\BankSystemExample.csproj.GenerateResource.Cache
+F:\Dragica Nikolova Labs\Bank Application\BankSystemExample\bin\Debug\BankSystemExample.exe.config
+F:\Dragica Nikolova Labs\Bank Application\BankSystemExample\bin\Debug\BankSystemExample.exe
+F:\Dragica Nikolova Labs\Bank Application\BankSystemExample\bin\Debug\BankSystemExample.pdb
+F:\Dragica Nikolova Labs\Bank Application\BankSystemExample\bin\Debug\Models.dll
+F:\Dragica Nikolova Labs\Bank Application\BankSystemExample\bin\Debug\Models.pdb
+F:\Dragica Nikolova Labs\Bank Application\BankSystemExample\obj\Debug\BankSystemExample.csprojResolveAssemblyReference.cache
+F:\Dragica Nikolova Labs\Bank Application\BankSystemExample\obj\Debug\BankSystemExample.frmMain.resources
+F:\Dragica Nikolova Labs\Bank Application\BankSystemExample\obj\Debug\BankSystemExample.Properties.Resources.resources
+F:\Dragica Nikolova Labs\Bank Application\BankSystemExample\obj\Debug\BankSystemExample.csproj.GenerateResource.Cache
+F:\Dragica Nikolova Labs\Bank Application\BankSystemExample\obj\Debug\BankSystemExample.exe
+F:\Dragica Nikolova Labs\Bank Application\BankSystemExample\obj\Debug\BankSystemExample.pdb

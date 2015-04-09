@@ -19,161 +19,169 @@ namespace BankSystemExample
         public frmMain()
         {
             InitializeComponent();
-            cbStartDate.SelectedIndex = 0;
-            cbEndDate.SelectedIndex = 0;
-
+            cbPeriodUnitOfTime.SelectedIndex = 0;
+            cbInterestUnitOfTime.SelectedIndex = 0;
         }
 
-        TransactionAccount transactionAccount;
-        DepositAccount depositAccount;
-                
         private void btnCreateTransactionAccount_Click(object sender, EventArgs e)
-        {            
+        {
             //Parse values for Limit and Currency from TextBoxes.
             decimal limitAmount = Decimal.Parse(txtLimit.Text);
             string currency = txtCurrency.Text;
 
             //And create new TransactionAccount instance.
-            transactionAccount = new TransactionAccount(limitAmount, currency);
+            TransactionAccount transactionAccount = new TransactionAccount(limitAmount, currency);
 
             //Display all TransactionAccount details.
-            ShowAccountDetails(transactionAccount);
-                        
-        }  
-    
-        private void ShowAccountDetails(IAccount acc)
+            this.ShowAccountDetails(transactionAccount);
+        }
+
+        private void ShowAccountDetails(IAccount account)
         {
-            Account account = (Account)acc;
-            //Fill in labels common for account.
+            //Display Account details.
             lblId.Text = Convert.ToString(account.Id);
             lblNumber.Text = account.Number;
             lblCurrency.Text = account.Currency;
-            CurrencyAmount b = account.Balance;
-            string balance = Convert.ToString(b.Amount) + " " + b.Currency;
-            lblBalance.Text = balance;            
+            CurrencyAmount amount = account.Balance;
+            string balance = Convert.ToString(amount.Amount) + " " + amount.Currency;
+            lblBalance.Text = balance;
+            lblDetails.Visible = true;
 
-            //And check if account is of type TransactionAccount. If it is display TransactionAccount details.
-            if(account is TransactionAccount) ShowTransactionAccountDetails((ITransactionAccount)account);
+            //Check if this is a TransactionAccount and if this is true populate the TransactionAccount specific label.
+            if (account is TransactionAccount) ShowTransactionAccountDetails((ITransactionAccount)account);
 
-            //Otherwise display DepositAccount details.
-            else  ShowDepositAccountDetails((IDepositAccount)account);            
+            //Check if this is a DepositAccount and if this is true populate the DepositAccount specific labels.
+            if (account is DepositAccount) ShowDepositAccountDetails((IDepositAccount)account);
         }
 
         private void ShowTransactionAccountDetails(ITransactionAccount account)
         {
-            //Convert account back to TransactionAccount.
-            TransactionAccount transactAccount = (TransactionAccount)account;
-            CurrencyAmount currencyAmount = transactAccount.Limit;
+            lblLimitCurrency.Text = Convert.ToString(account.Limit.Amount) + " " + account.Limit.Currency;
 
-            //And fill in labels with details for TransacionAccount.
-            lblLimitCurrency.Text = Convert.ToString(currencyAmount.Amount) + " " + currencyAmount.Currency;
+            //Don't display details for DepositAccount(if a deposit account is created previosly).
+            lblPeriodUnitOfTime.Text = String.Empty;
+            lblPercentUnitOfTime.Text = String.Empty;
+            lblStartDate.Text = String.Empty;
+            lblEndDate.Text = String.Empty;
         }
 
         private void btnCreateDepositAccount_Click(object sender, EventArgs e)
         {
-            //Create neccessary members for DepositAccount constructor and create new instance
+            DepositAccount depositAccount = CreateDepositAccount();
+            
+            this.ShowAccountDetails(depositAccount);
+        }
+
+        private DepositAccount CreateDepositAccount()
+        {
+            //Create neccessary members for DepositAccount constructor.
             int period = Int32.Parse(txtPeriod.Text);
-            UnitOfTime periodUnitOfTime = (UnitOfTime)Enum.Parse(typeof(UnitOfTime), cbStartDate.Text);
-            TimePeriod depositPeriod = new TimePeriod(){Period = period, Unit = periodUnitOfTime};
-            decimal percent = Convert.ToDecimal(txtPercent.Text);
-            UnitOfTime percentUnitOfTime = (UnitOfTime)Enum.Parse(typeof(UnitOfTime), cbEndDate.Text);
-            InterestRate interestRate = new InterestRate() {Percent = percent, Unit = percentUnitOfTime};
+            UnitOfTime periodUnitOfTime = (UnitOfTime)Enum.Parse(typeof(UnitOfTime), cbPeriodUnitOfTime.Text);
+            TimePeriod depositPeriod = new TimePeriod() { Period = period, Unit = periodUnitOfTime };
+            decimal percent = Convert.ToDecimal(txtInterest.Text);
+            UnitOfTime percentUnitOfTime = (UnitOfTime)Enum.Parse(typeof(UnitOfTime), cbInterestUnitOfTime.Text);
+            InterestRate interestRate = new InterestRate() { Percent = percent, Unit = percentUnitOfTime };
             DateTime startDate = dtpStartDate.Value;
             DateTime endDate = dtpEndDate.Value;
-            if (transactionAccount != null)
-            {
-                depositAccount = new DepositAccount(depositPeriod, interestRate, startDate, endDate, transactionAccount, transactionAccount.Currency);
-            }            
+            decimal limitAmount = Decimal.Parse(txtLimit.Text);
+            string currency = txtCurrency.Text;
+            TransactionAccount transactionAccount = new TransactionAccount(limitAmount, currency);
 
-            //Display DepositAccount specific attributes.
-            ShowAccountDetails(depositAccount);
+            //And create new instance.
+            DepositAccount depositAccount = new DepositAccount(depositPeriod, interestRate, startDate, endDate, transactionAccount, currency);
+            return depositAccount;
+        }
+
+        private LoanAccount CreateLoanAccount()
+        {
+            //Create neccessary members for LoanAccount constructor.
+            int period = Int32.Parse(txtPeriod.Text);
+            UnitOfTime periodUnitOfTime = (UnitOfTime)Enum.Parse(typeof(UnitOfTime), cbPeriodUnitOfTime.Text);
+            TimePeriod depositPeriod = new TimePeriod() { Period = period, Unit = periodUnitOfTime };
+            decimal percent = Convert.ToDecimal(txtInterest.Text);
+            UnitOfTime percentUnitOfTime = (UnitOfTime)Enum.Parse(typeof(UnitOfTime), cbInterestUnitOfTime.Text);
+            InterestRate interestRate = new InterestRate() { Percent = percent, Unit = percentUnitOfTime };
+            DateTime startDate = dtpStartDate.Value;
+            DateTime endDate = dtpEndDate.Value;
+            decimal limitAmount = Decimal.Parse(txtLimit.Text);
+            string currency = txtCurrency.Text;
+            TransactionAccount transactionAccount = new TransactionAccount(limitAmount, currency);
+
+            //And create new instance.
+            LoanAccount loanAccount = new LoanAccount(depositPeriod, interestRate, startDate, endDate, transactionAccount, currency);
+            return loanAccount;
         }
 
         private void ShowDepositAccountDetails(IDepositAccount account)
         {
-            //Convert account back to DepositAccount and extract DepositAccount specific attributes.
-            DepositAccount depositAccount = (DepositAccount)account;
-            TimePeriod timePeriod = depositAccount.Period;
-            int period = timePeriod.Period;
-            UnitOfTime periodUnitOfTime = timePeriod.Unit;
-            InterestRate interestRate = depositAccount.Interest;
-            decimal percent = interestRate.Percent;
-            UnitOfTime percentUnitOfTime = interestRate.Unit;
-            string startDate = depositAccount.StartDate.ToString();
-            string endDate = depositAccount.EndDate.ToString();
+            lblPeriodUnitOfTime.Text = Convert.ToString(account.Period.Period) + " " + account.Period.Unit.ToString();
+            lblPercentUnitOfTime.Text = Convert.ToString(account.Interest.Percent) + " " + Convert.ToString(account.Interest.Unit);
+            lblStartDate.Text = account.StartDate.ToString();
+            lblEndDate.Text = account.EndDate.ToString();
+            lblLimitCurrency.Text = Convert.ToString(account.TransactionAccount.Limit.Amount) + " " + account.TransactionAccount.Limit.Currency;
 
-            //Fill in labels with details for DepositAccount.
-            lblPeriodUnitOfTime.Text = Convert.ToString(period) + " " + periodUnitOfTime.ToString();
-            lblPercentUnitOfTime.Text = Convert.ToString(percent) + " " + Convert.ToString(percentUnitOfTime);
-            lblStart.Text = startDate;
-            lblEnd.Text = endDate;
-
-            //Display descriptive labels
-            lblDisplayPeriod.Visible = true;
-            lblDisplayInterest.Visible = true;
-            lblDisplayStart.Visible = true;
-            lblDisplayEnd.Visible = true;
         }
 
         private void btnMakeTransaction_Click(object sender, EventArgs e)
         {
-            CurrencyAmount amount = new CurrencyAmount() { Amount = 20000, Currency = "MKD"};
-            ITransactionAccount transactAccount = transactionAccount;
-            IDepositAccount depAccount = depositAccount;
-            ILoanAccount loanAccount = new LoanAccount(depositAccount.Period, depositAccount.Interest, depositAccount.StartDate, depositAccount.EndDate, depositAccount.TransactionAccount, depositAccount.Currency);
+            CurrencyAmount amount = new CurrencyAmount() { Amount = 20000, Currency = "MKD" };
+            IDepositAccount depositAccount = CreateDepositAccount();
+            ILoanAccount loanAccount = CreateLoanAccount();
 
-            //Create a transactionProcessor and transfer a transaction
-            ITransactionProcessor transactionProcessor = new TransactionProcessor();
-            transactionProcessor.ProcessTransaction(TransactionType.Transfer, loanAccount, depAccount, amount);
+            //Create a transactionProcessor and make a transfer.
+            ITransactionProcessor transactionProcessor = TransactionProcessor.GetTransactionProcessor();
+            transactionProcessor.ProcessTransaction(TransactionType.Transfer, loanAccount, depositAccount, amount);
 
-            //Fill in Account common labels
-            lbl_ToId.Text = Convert.ToString(loanAccount.Id);
-            lbl_ToNumber.Text = loanAccount.Number;
-            lbl_ToCurrency.Text = loanAccount.Currency;
-            CurrencyAmount b = loanAccount.Balance;
-            string balance = Convert.ToString(b.Amount) + " " + b.Currency;
-            lbl_ToBalance.Text = balance;            
+            this.ShowAccountDetails(depositAccount);
+            //this.ShowAccountDetails_To(loanAccount);   
+            this.DisplayLastTransactionDetails();
+        }
 
-            //Fill in TransactionAccount common labels
-            CurrencyAmount currencyAmount = ((LoanAccount)loanAccount).TransactionAccount.Limit;
-            lbl_ToLimit.Text = Convert.ToString(currencyAmount.Amount) + " " + currencyAmount.Currency;
+        private void ShowAccountDetails_To(IAccount account)
+        {
+            //Fill in Account common labels.
+            lbl_ToId.Text = Convert.ToString(account.Id);
+            lbl_ToNumber.Text = account.Number;
+            lbl_ToCurrency.Text = account.Currency;
+            CurrencyAmount amount = account.Balance;            
+            lbl_ToBalance.Text = Convert.ToString(amount.Amount) + " " + amount.Currency; ;
 
-            //Fill in DepositAccount common labels
-            TimePeriod timePeriod = ((LoanAccount)loanAccount).Period;
-            int period = timePeriod.Period;
-            UnitOfTime periodUnitOfTime = timePeriod.Unit;
-            InterestRate interestRate = ((LoanAccount)loanAccount).Interest;
-            decimal percent = interestRate.Percent;
-            UnitOfTime percentUnitOfTime = interestRate.Unit;
-            string startDate = ((LoanAccount)loanAccount).StartDate.ToString();
-            string endDate = ((LoanAccount)loanAccount).EndDate.ToString();
-            
-            lbl_ToPeriod.Text = Convert.ToString(period) + " " + periodUnitOfTime.ToString();
-            lbl_ToInterest.Text = Convert.ToString(percent) + " " + Convert.ToString(percentUnitOfTime);
-            lbl_ToStartDate.Text = startDate;
-            lbl_ToEndDate.Text = endDate;
+            //Fill in DepositAccount common labels.
+            DepositAccount depositAccount = (DepositAccount)account;
+            lbl_ToLimit.Text = Convert.ToString(depositAccount.TransactionAccount.Limit.Amount) + " " + depositAccount.TransactionAccount.Limit.Currency;           
+            lbl_ToPeriod.Text = Convert.ToString(depositAccount.Period.Period) + " " + depositAccount.Period.Unit.ToString();
+            lbl_ToInterest.Text = Convert.ToString(depositAccount.Interest.Percent) + " " + Convert.ToString(depositAccount.Interest.Unit);
+            lbl_ToStartDate.Text = depositAccount.StartDate.ToString();
+            lbl_ToEndDate.Text = depositAccount.EndDate.ToString();
+        }
 
-            lbl_ToId.Visible = true;
-            lbl_ToNumber.Visible = true;
-            lbl_ToCurrency.Visible = true;
-            lbl_ToBalance.Visible = true;
-            lbl_ToLimit.Visible = true;
-            lbl_ToPeriod.Visible = true;
-            lbl_ToInterest.Visible = true;
-            lbl_ToStartDate.Visible = true;
-            lbl_ToEndDate.Visible = true;
+        private void btnMakeGroupTransaction_Click(object sender, EventArgs e)
+        {
+            CurrencyAmount amount = new CurrencyAmount() { Amount = 2000, Currency = "MKD" };
+            IAccount[] accountArray = new IAccount[2];
+            IDepositAccount depositAccount = this.CreateDepositAccount();
+            ILoanAccount loanAccount = this.CreateLoanAccount();
+            accountArray[0] = depositAccount;
+            accountArray[1] = loanAccount;
+            ITransactionProcessor transactionProcessor = TransactionProcessor.GetTransactionProcessor(); ;
+            transactionProcessor.ProcessGroupTransactions(TransactionType.Debit, amount, accountArray);
 
-            //Display descriptive labels
-            lbl_ToDetails.Visible = true;
-            lbl_DisplayToId.Visible = true;
-            lbl_DisplayToNumber.Visible = true;
-            lbl_DisplayToCurrency.Visible = true;
-            lbl_DisplayToBalance.Visible = true;
-            lbl_DisplayToLimit.Visible = true;
-            lbl_DisplayToPeriod.Visible = true;
-            lbl_DisplayToInterest.Visible = true;
-            lbl_DisplayToStartDate.Visible = true;
-            lbl_DisplayToEndDate.Visible = true;
+            ShowAccountDetails(loanAccount);
+            //ShowAccountDetails_To(loanAccount);
+            DisplayLastTransactionDetails();
+        }
+
+        private void DisplayLastTransactionDetails()
+        {
+            ITransactionProcessor transactionProcessor = TransactionProcessor.GetTransactionProcessor();
+            //TransactionLogEntry lastLogEntry = transactionProcessor.LastTransaction;
+            TransactionLogEntry lastLogEntry = transactionProcessor[transactionProcessor.TransactionCount - 1];
+            int totalTransactions = transactionProcessor.TransactionCount;
+            lblTotalTransactionCount.Text = Convert.ToString(totalTransactions);
+            lblTransactionType.Text = lastLogEntry.TransactionType.ToString();
+            lblAmount.Text = lastLogEntry.Amount.Amount.ToString() + " " + lastLogEntry.Amount.Currency;
+            lblStatus.Text = lastLogEntry.Status.ToString();
+            ShowAccountDetails_To(lastLogEntry.Accounts);
 
 
         }

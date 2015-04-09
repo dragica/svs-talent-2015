@@ -15,3 +15,8 @@ F:\BankSystemDragica\Models\bin\Debug\Models.dll
 F:\BankSystemDragica\Models\bin\Debug\Models.pdb
 F:\BankSystemDragica\Models\obj\Debug\Models.dll
 F:\BankSystemDragica\Models\obj\Debug\Models.pdb
+F:\Dragica Nikolova Labs\Bank Application\Models\bin\Debug\Models.dll
+F:\Dragica Nikolova Labs\Bank Application\Models\bin\Debug\Models.pdb
+F:\Dragica Nikolova Labs\Bank Application\Models\obj\Debug\Models.dll
+F:\Dragica Nikolova Labs\Bank Application\Models\obj\Debug\Models.pdb
+F:\Dragica Nikolova Labs\Bank Application\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
