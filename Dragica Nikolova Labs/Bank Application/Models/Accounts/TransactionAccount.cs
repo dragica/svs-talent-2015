@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Models.Accounts
 {
+    [AccountMetadata("Specifies a Transaction Account", "Some Transaction Limits")]
     public class TransactionAccount : Account, ITransactionAccount
     {
         public CurrencyAmount Limit { get; private set; }
@@ -21,8 +22,12 @@ namespace Models.Accounts
 
         protected override string GenerateAccountNumber()
         {
-            string accountNumber = AccountHelper.GenerateAccountNumber(typeof(TransactionAccount),this.Id);
-            return accountNumber;
+            return AccountHelper.GenerateAccountNumber<TransactionAccount>(this.Id);
+        }
+
+        public void CheckLimit(CurrencyAmount amount)
+        {
+            if (amount.Amount > Limit.Amount) throw new LimitOverflowException();
         }
     }
 }

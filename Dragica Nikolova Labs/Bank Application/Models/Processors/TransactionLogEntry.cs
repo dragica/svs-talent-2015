@@ -12,16 +12,15 @@ namespace Models.Processors
     {
         public TransactionType TransactionType { get; set; }
         public CurrencyAmount Amount { get; set; }
-        public Account Accounts { get; set; }
+        public Account[] Accounts { get; set; }
         public TransactionStatus Status { get; set; }
 
-        public TransactionLogEntry(TransactionType type, CurrencyAmount amount, Account accounts, TransactionStatus status)
+        public TransactionLogEntry(TransactionType type, CurrencyAmount amount, Account[] accounts, TransactionStatus status)
         {
             this.TransactionType = type;
             this.Amount = amount;
             this.Accounts = accounts;
             this.Status = status;
         }
-
     }
 }

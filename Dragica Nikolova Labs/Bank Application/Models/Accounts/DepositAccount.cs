@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Models.Accounts
 {
+    [AccountMetadata("Specifies a Deposit Account", "Some Deposit Limits")]
     public class DepositAccount : Account, IDepositAccount
     {
         public TimePeriod Period { get; private set; }
@@ -29,8 +30,7 @@ namespace Models.Accounts
 
         protected override string GenerateAccountNumber()
         {
-            string accountNumber = AccountHelper.GenerateAccountNumber(typeof(DepositAccount), this.Id);
-            return accountNumber;
+            return AccountHelper.GenerateAccountNumber<DepositAccount>(this.Id);
         }
         
     }

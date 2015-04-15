@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Models.Accounts
 {
+    [AccountMetadata("Specifies a Loan Account", "Some Loan Limits")]
     public sealed class LoanAccount : DepositAccount, ILoanAccount
     {
         public LoanAccount(TimePeriod depositPeriod, InterestRate interestRate, DateTime startDate, DateTime endDate, ITransactionAccount transactionAccount, string currency) 
@@ -40,8 +41,7 @@ namespace Models.Accounts
 
         protected override string GenerateAccountNumber()
         {
-            string accountNumber = AccountHelper.GenerateAccountNumber(typeof(LoanAccount), this.Id);
-            return accountNumber;
+            return AccountHelper.GenerateAccountNumber<LoanAccount>(this.Id);
         }
     }
 }

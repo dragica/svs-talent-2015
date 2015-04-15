@@ -64,3 +64,14 @@ F:\Dragica Nikolova Labs\Bank Application\BankSystemExample\obj\Debug\BankSystem
 F:\Dragica Nikolova Labs\Bank Application\BankSystemExample\obj\Debug\BankSystemExample.csproj.GenerateResource.Cache
 F:\Dragica Nikolova Labs\Bank Application\BankSystemExample\obj\Debug\BankSystemExample.exe
 F:\Dragica Nikolova Labs\Bank Application\BankSystemExample\obj\Debug\BankSystemExample.pdb
+D:\SeavusDotNetTraining\github\svs-talent-2015\Dragica Nikolova Labs\Bank Application\BankSystemExample\bin\Debug\BankSystemExample.exe.config
+D:\SeavusDotNetTraining\github\svs-talent-2015\Dragica Nikolova Labs\Bank Application\BankSystemExample\obj\Debug\BankSystemExample.exe
+D:\SeavusDotNetTraining\github\svs-talent-2015\Dragica Nikolova Labs\Bank Application\BankSystemExample\obj\Debug\BankSystemExample.pdb
+D:\SeavusDotNetTraining\github\svs-talent-2015\Dragica Nikolova Labs\Bank Application\BankSystemExample\bin\Debug\BankSystemExample.exe
+D:\SeavusDotNetTraining\github\svs-talent-2015\Dragica Nikolova Labs\Bank Application\BankSystemExample\bin\Debug\BankSystemExample.pdb
+D:\SeavusDotNetTraining\github\svs-talent-2015\Dragica Nikolova Labs\Bank Application\BankSystemExample\bin\Debug\Models.dll
+D:\SeavusDotNetTraining\github\svs-talent-2015\Dragica Nikolova Labs\Bank Application\BankSystemExample\bin\Debug\Models.pdb
+D:\SeavusDotNetTraining\github\svs-talent-2015\Dragica Nikolova Labs\Bank Application\BankSystemExample\obj\Debug\BankSystemExample.csprojResolveAssemblyReference.cache
+D:\SeavusDotNetTraining\github\svs-talent-2015\Dragica Nikolova Labs\Bank Application\BankSystemExample\obj\Debug\BankSystemExample.frmMain.resources
+D:\SeavusDotNetTraining\github\svs-talent-2015\Dragica Nikolova Labs\Bank Application\BankSystemExample\obj\Debug\BankSystemExample.Properties.Resources.resources
+D:\SeavusDotNetTraining\github\svs-talent-2015\Dragica Nikolova Labs\Bank Application\BankSystemExample\obj\Debug\BankSystemExample.csproj.GenerateResource.Cache

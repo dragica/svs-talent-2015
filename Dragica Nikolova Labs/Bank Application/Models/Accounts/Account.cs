@@ -28,6 +28,7 @@ namespace Models.Accounts
         /// <summary>
         /// Stores the account number.
         /// </summary>
+        [FormatRestriction("XXXX-XXXX-XXXX-XXXX", 16)]
         private string number;
         public string Number
         {
@@ -47,11 +48,22 @@ namespace Models.Accounts
         public CurrencyAmount Balance
         {
             get { return balance; }
-            protected set
+            set
             {
+                CurrencyAmount amount = value;
+                if (amount.Amount != this.balance.Amount)
+                {
+                    if(OnBalanceChanged!=null)
+                    OnBalanceChanged(this, new BalanceChangedEventArguments(this, amount)); 
+                }
                 balance = value;
             }
         }
+
+        public AccountStatus Status { get; set; }
+
+        public event EventHandler<BalanceChangedEventArguments> OnBalanceChanged;
+
 
         /// <summary>
         /// A parameterized constructor that initializes id, number, currency and sets balance to zero.
@@ -65,7 +77,8 @@ namespace Models.Accounts
             this.Number = number;
             this.Currency = currency;
             CurrencyAmount b = new CurrencyAmount() {Amount = 0, Currency = currency };
-            this.Balance = b;            
+            this.Balance = b;
+            this.Status = AccountStatus.Inactive;
         }
 
         /// <summary>
@@ -79,6 +92,7 @@ namespace Models.Accounts
             this.Currency = currency;
             CurrencyAmount b = new CurrencyAmount() { Amount = 0, Currency = currency };
             this.Balance = b;
+            this.Status = AccountStatus.Inactive;
         }
         
         /// <summary>
@@ -91,7 +105,8 @@ namespace Models.Accounts
             this.Number = this.GenerateAccountNumber();
             this.Currency = currency;
             CurrencyAmount b = new CurrencyAmount() { Amount = 0, Currency = currency };
-            this.Balance = b;                       
+            this.Balance = b;
+            this.Status = AccountStatus.Inactive;                     
         }
         
         #region Public Methods
@@ -105,10 +120,11 @@ namespace Models.Accounts
         {
             if (CheckCurrency(amount))
             {
-                this.balance.Amount -= amount.Amount;
+                CurrencyAmount newBalance = new CurrencyAmount() { Amount = this.balance.Amount - amount.Amount, Currency = this.balance.Currency };
+                this.Balance = newBalance;
                 return TransactionStatus.Completed;
             }
-            return TransactionStatus.Failed;
+            else throw new CurrencyMismatchException();
         }
 
         /// <summary>
@@ -120,10 +136,11 @@ namespace Models.Accounts
         {
             if (CheckCurrency(amount))
             {
-                this.balance.Amount += amount.Amount;
+                CurrencyAmount newBalance = new CurrencyAmount() { Amount = this.balance.Amount + amount.Amount, Currency = this.balance.Currency };
+                this.Balance = newBalance;
                 return TransactionStatus.Completed;
             }
-            return TransactionStatus.Failed;
+            else throw new CurrencyMismatchException();            
         }
 
         #endregion
