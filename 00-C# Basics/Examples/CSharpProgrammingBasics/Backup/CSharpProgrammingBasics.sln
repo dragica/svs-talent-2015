@@ -1,16 +1,16 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpProgrammingBasics.SampleProject", "CSharpProgrammingBasics.SampleProject\CSharpProgrammingBasics.SampleProject.csproj", "{CC854CC3-09E2-49AC-971A-F9E533064ACC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpProgrammingBasics.Library", "CSharpProgrammingBasics.Library\CSharpProgrammingBasics.Library.csproj", "{A5EC8BFE-C3F5-410E-B915-9E0B0F1DAE8F}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1B4ABDC2-6E4D-4462-8A7D-E17E27A34847}"
 	ProjectSection(SolutionItems) = preProject
 		CSharpProgrammingBasics.vsmdi = CSharpProgrammingBasics.vsmdi
 		Local.testsettings = Local.testsettings
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpProgrammingBasics.SampleProject", "CSharpProgrammingBasics.SampleProject\CSharpProgrammingBasics.SampleProject.csproj", "{CC854CC3-09E2-49AC-971A-F9E533064ACC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpProgrammingBasics.Library", "CSharpProgrammingBasics.Library\CSharpProgrammingBasics.Library.csproj", "{A5EC8BFE-C3F5-410E-B915-9E0B0F1DAE8F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpProgrammingBasics.Library.Tests", "CSharpProgrammingBasics.Library.Tests\CSharpProgrammingBasics.Library.Tests.csproj", "{9B068D4E-CA5B-4309-A77A-4E83D4A2F352}"
 EndProject

@@ -1,0 +1,46 @@
+﻿@model System.Collections.Generic.List<CSharpProgrammingBasics.Library.Samples.Inheritance.AbstractCar>
+@{
+    ViewBag.Title = "OverrideNewDifference";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Difference in using <i>override & new</i></h2>
+<div id="actions">
+    <a href="@Url.Action("OverriddenExample")">Call Overridden</a>
+    <a href="@Url.Action("HiddenExample")">Call Hidden</a>
+</div>
+<div class="display-results-captions">
+        <div class="display-label">Name</div>
+        <div class="display-label">NumberOfWheels</div>
+        <div class="display-label">SteeringWheelPosition</div>
+        <div class="display-label">Colour</div>
+        <div class="display-label">EngineRunning</div>
+        <div class="display-label">RadioOn</div>
+        <div class="display-label">LightsOn</div>
+        <div class="display-label">Diagnostics</div>
+</div>
+@foreach (CSharpProgrammingBasics.Library.Samples.Inheritance.AbstractCar _item in @Model)
+{
+    <div class="display-results">
+        <div class="display-field">@_item.Name</div>
+        <div class="clear"></div>
+        <div class="display-field">@_item.NumberOfWheels</div>
+        <div class="clear"></div>
+        <div class="display-field">@_item.SteeringWheelPosition</div>
+        <div class="clear"></div>
+        <div class="display-field">@_item.Colour</div>
+        <div class="clear"></div>
+        <div class="display-field">@_item.IsEngineRunning</div>
+        <div class="clear"></div>
+        <div class="display-field">@_item.IsRadioOn</div>
+        <div class="clear"></div>
+        <div class="display-field">@_item.IsLightsOn</div>
+        <div class="clear"></div>
+        <div class="display-field">@_item.LastDiagnostics</div>
+        <div class="clear"></div>
+    </div>
+}
+<div id="navigateBack" class="clear">
+    <a href="@Url.Action("Index")">Back</a>
+</div>
+

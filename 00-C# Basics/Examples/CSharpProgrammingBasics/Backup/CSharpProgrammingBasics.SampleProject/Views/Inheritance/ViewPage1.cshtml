@@ -1,0 +1,20 @@
+﻿@model CSharpProgrammingBasics.Library.Samples.Inheritance.AbstractCar
+
+@{
+    ViewBag.Title = "ViewPage1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ViewPage1</h2>
+
+<fieldset>
+    <legend>AbstractCar</legend>
+
+    <div class="display-label">NumberOfWheels</div>
+    <div class="display-field">@Model.NumberOfWheels</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+

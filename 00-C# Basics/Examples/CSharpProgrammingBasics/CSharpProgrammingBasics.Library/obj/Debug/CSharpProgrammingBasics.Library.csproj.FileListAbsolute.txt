@@ -5,3 +5,10 @@ C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Sam
 C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\CSharpProgrammingBasics.Library\obj\Debug\CSharpProgrammingBasics.Library.dll
 C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\CSharpProgrammingBasics.Library\obj\Debug\CSharpProgrammingBasics.Library.pdb
 C:\Users\goce.kalamadevski\Documents\SeavusDocs\Training material\OOP-Basics\Samples\CSharpProgrammingBasics\CSharpProgrammingBasics.Library\obj\Debug\CSharpProgrammingBasics.Library.csprojResolveAssemblyReference.cache
+D:\WorkingProjects\GitHub\svs-talent-2015\00-C# Basics\Examples\CSharpProgrammingBasics\CSharpProgrammingBasics.Library\bin\Debug\CSharpProgrammingBasics.Library.dll.config
+D:\WorkingProjects\GitHub\svs-talent-2015\00-C# Basics\Examples\CSharpProgrammingBasics\CSharpProgrammingBasics.Library\bin\Debug\CSharpProgrammingBasics.Library.dll
+D:\WorkingProjects\GitHub\svs-talent-2015\00-C# Basics\Examples\CSharpProgrammingBasics\CSharpProgrammingBasics.Library\bin\Debug\CSharpProgrammingBasics.Library.pdb
+D:\WorkingProjects\GitHub\svs-talent-2015\00-C# Basics\Examples\CSharpProgrammingBasics\CSharpProgrammingBasics.Library\bin\Debug\System.dll
+D:\WorkingProjects\GitHub\svs-talent-2015\00-C# Basics\Examples\CSharpProgrammingBasics\CSharpProgrammingBasics.Library\obj\Debug\CSharpProgrammingBasics.Library.csprojResolveAssemblyReference.cache
+D:\WorkingProjects\GitHub\svs-talent-2015\00-C# Basics\Examples\CSharpProgrammingBasics\CSharpProgrammingBasics.Library\obj\Debug\CSharpProgrammingBasics.Library.dll
+D:\WorkingProjects\GitHub\svs-talent-2015\00-C# Basics\Examples\CSharpProgrammingBasics\CSharpProgrammingBasics.Library\obj\Debug\CSharpProgrammingBasics.Library.pdb

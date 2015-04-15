@@ -1,0 +1,17 @@
+﻿@model CSharpProgrammingBasics.Library.Samples.Inheritance.AbstractCar
+@{
+    ViewBag.Title = "OverrideNewDifference";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Difference in using <i>override & new</i></h2>
+<div>
+    <div id="actions">
+        <a href="@Url.Action("OverriddenExample")">Call Overridden</a>
+        <a href="@Url.Action("HiddenExample")">Call Hidden</a>
+    </div>
+</div>
+<div>
+    <a href="@Url.Action("Index")">Back</a>
+</div>
+

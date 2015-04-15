@@ -74,6 +74,16 @@
     <Compile Include="Samples\Methods\SampleClass.cs" />
     <Compile Include="Samples\Namespaces\CarAccessories.cs" />
     <Compile Include="Samples\SampleClass.cs" />
+    <Compile Include="Samples\SOLID\ISP\Bad\FordModelT.cs" />
+    <Compile Include="Samples\SOLID\ISP\Bad\ICar.cs" />
+    <Compile Include="Samples\SOLID\ISP\Bad\MitsubishiLancerEvo.cs" />
+    <Compile Include="Samples\SOLID\ISP\Bad\Tesla.cs" />
+    <Compile Include="Samples\SOLID\ISP\Good\ICar.cs" />
+    <Compile Include="Samples\SOLID\ISP\Good\ICarWithBoardComputer.cs" />
+    <Compile Include="Samples\SOLID\ISP\Good\IRacingCar.cs" />
+    <Compile Include="Samples\SOLID\SRP\Bad\CarAlmighty.cs" />
+    <Compile Include="Samples\SOLID\SRP\Good\CarPure.cs" />
+    <Compile Include="Samples\SOLID\SRP\Good\CarUI.cs" />
     <Compile Include="Samples\Static\CarFactory.cs" />
     <Compile Include="Samples\Static\SpecializedCarFactory.cs" />
   </ItemGroup>
