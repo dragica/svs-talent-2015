@@ -1,0 +1,4 @@
+D:\SeavusDotNetTraining\OpenClosedPrinciple\OpenClosedPrinciple\bin\Debug\OpenClosedPrinciple.dll
+D:\SeavusDotNetTraining\OpenClosedPrinciple\OpenClosedPrinciple\bin\Debug\OpenClosedPrinciple.pdb
+D:\SeavusDotNetTraining\OpenClosedPrinciple\OpenClosedPrinciple\obj\Debug\OpenClosedPrinciple.dll
+D:\SeavusDotNetTraining\OpenClosedPrinciple\OpenClosedPrinciple\obj\Debug\OpenClosedPrinciple.pdb

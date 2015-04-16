@@ -1,0 +1,4 @@
+D:\SeavusDotNetTraining\github\svs-talent-2015\00-C# Basics\Labs\01.03 SOLID_SRP\ExampleSrp\ExampleSrp\bin\Debug\ExampleSrp.dll
+D:\SeavusDotNetTraining\github\svs-talent-2015\00-C# Basics\Labs\01.03 SOLID_SRP\ExampleSrp\ExampleSrp\bin\Debug\ExampleSrp.pdb
+D:\SeavusDotNetTraining\github\svs-talent-2015\00-C# Basics\Labs\01.03 SOLID_SRP\ExampleSrp\ExampleSrp\obj\Debug\ExampleSrp.dll
+D:\SeavusDotNetTraining\github\svs-talent-2015\00-C# Basics\Labs\01.03 SOLID_SRP\ExampleSrp\ExampleSrp\obj\Debug\ExampleSrp.pdb

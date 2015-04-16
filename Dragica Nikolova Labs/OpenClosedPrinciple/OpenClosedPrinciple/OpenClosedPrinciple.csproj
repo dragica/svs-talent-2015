@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{54651A29-B373-4BF1-AFA8-2722C2FFD752}</ProjectGuid>
+    <ProjectGuid>{F800C729-6B32-4F4A-862C-A9F6A9C2B92C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExampleSrp</RootNamespace>
-    <AssemblyName>ExampleSrp</AssemblyName>
+    <RootNamespace>OpenClosedPrinciple</RootNamespace>
+    <AssemblyName>OpenClosedPrinciple</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,15 +39,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\OrderItem.cs" />
+    <Compile Include="Model\PaymentDetails.cs" />
+    <Compile Include="Model\PaymentMethod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TheBad\AcmeCar.cs" />
-    <Compile Include="TheGood\AcmeCar.cs" />
-    <Compile Include="TheGood\ExceptionLogger.cs" />
-    <Compile Include="TheGood\ILogger.cs" />
-    <Compile Include="TheGood\Logger.cs" />
-    <Compile Include="TheGood\StatusLogger.cs" />
+    <Compile Include="TheBad\ShoppingCart.cs" />
+    <Compile Include="TheGood\BuyThreeGetOneFree.cs" />
+    <Compile Include="TheGood\DefaultPriceCalculator.cs" />
+    <Compile Include="TheGood\IPriceCalculator.cs" />
+    <Compile Include="TheGood\IPriceStrategy.cs" />
+    <Compile Include="TheGood\PricePerKilogramStrategy.cs" />
+    <Compile Include="TheGood\PricePerUnitStrategy.cs" />
+    <Compile Include="TheGood\ShoppingCart.cs" />
+    <Compile Include="TheGood\SpecialPriceStrategy.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

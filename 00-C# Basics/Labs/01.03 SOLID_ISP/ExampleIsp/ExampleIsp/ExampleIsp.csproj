@@ -42,10 +42,19 @@
     <Compile Include="TheBad\AcmeFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TheBad\IFactory.cs" />
+    <Compile Include="TheGood\Factories\AcmeFactory.cs" />
+    <Compile Include="TheGood\Factories\BikeFactory.cs" />
+    <Compile Include="TheGood\Factories\CarFactory.cs" />
+    <Compile Include="TheGood\Interfaces\IBikeFactory.cs" />
+    <Compile Include="TheGood\Interfaces\IBikePaint.cs" />
+    <Compile Include="TheGood\Interfaces\ICarFactory.cs" />
+    <Compile Include="TheGood\Interfaces\IFactory.cs" />
+    <Compile Include="TheGood\Factories\MotoFactory.cs" />
+    <Compile Include="TheGood\Interfaces\IMotoPaint.cs" />
+    <Compile Include="TheGood\Interfaces\IMotorcycleFactory.cs" />
+    <Compile Include="TheGood\Interfaces\IPaint.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="TheGood\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
