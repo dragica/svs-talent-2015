@@ -10,3 +10,15 @@ D:\SeavusTraining\04-SPA\Project\Registar\Registar.DataLayer\bin\Debug\EntityFra
 D:\SeavusTraining\04-SPA\Project\Registar\Registar.DataLayer\obj\Debug\Registar.DataLayer.csprojResolveAssemblyReference.cache
 D:\SeavusTraining\04-SPA\Project\Registar\Registar.DataLayer\obj\Debug\Registar.DataLayer.dll
 D:\SeavusTraining\04-SPA\Project\Registar\Registar.DataLayer\obj\Debug\Registar.DataLayer.pdb
+D:\SeavusTraining\github\svs-talent-2015\04-SPA\Registar\Registar.DataLayer\bin\Debug\Registar.DataLayer.dll.config
+D:\SeavusTraining\github\svs-talent-2015\04-SPA\Registar\Registar.DataLayer\bin\Debug\Registar.DataLayer.dll
+D:\SeavusTraining\github\svs-talent-2015\04-SPA\Registar\Registar.DataLayer\bin\Debug\Registar.DataLayer.pdb
+D:\SeavusTraining\github\svs-talent-2015\04-SPA\Registar\Registar.DataLayer\bin\Debug\EntityFramework.dll
+D:\SeavusTraining\github\svs-talent-2015\04-SPA\Registar\Registar.DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\SeavusTraining\github\svs-talent-2015\04-SPA\Registar\Registar.DataLayer\bin\Debug\Registar.DomainModel.dll
+D:\SeavusTraining\github\svs-talent-2015\04-SPA\Registar\Registar.DataLayer\bin\Debug\Registar.DomainModel.pdb
+D:\SeavusTraining\github\svs-talent-2015\04-SPA\Registar\Registar.DataLayer\bin\Debug\EntityFramework.xml
+D:\SeavusTraining\github\svs-talent-2015\04-SPA\Registar\Registar.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\SeavusTraining\github\svs-talent-2015\04-SPA\Registar\Registar.DataLayer\obj\Debug\Registar.DataLayer.csprojResolveAssemblyReference.cache
+D:\SeavusTraining\github\svs-talent-2015\04-SPA\Registar\Registar.DataLayer\obj\Debug\Registar.DataLayer.dll
+D:\SeavusTraining\github\svs-talent-2015\04-SPA\Registar\Registar.DataLayer\obj\Debug\Registar.DataLayer.pdb
