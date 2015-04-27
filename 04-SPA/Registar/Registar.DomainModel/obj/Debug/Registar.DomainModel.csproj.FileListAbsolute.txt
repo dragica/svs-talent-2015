@@ -1,0 +1,9 @@
+D:\SeavusTraining\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\Registar.DomainModel.dll.config
+D:\SeavusTraining\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\Registar.DomainModel.dll
+D:\SeavusTraining\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\Registar.DomainModel.pdb
+D:\SeavusTraining\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\EntityFramework.dll
+D:\SeavusTraining\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\SeavusTraining\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\EntityFramework.xml
+D:\SeavusTraining\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\SeavusTraining\04-SPA\Project\Registar\Registar.DomainModel\obj\Debug\Registar.DomainModel.dll
+D:\SeavusTraining\04-SPA\Project\Registar\Registar.DomainModel\obj\Debug\Registar.DomainModel.pdb
