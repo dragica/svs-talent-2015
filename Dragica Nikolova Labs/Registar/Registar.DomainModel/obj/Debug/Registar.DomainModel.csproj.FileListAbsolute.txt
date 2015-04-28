@@ -1,0 +1,9 @@
+C:\odgoce\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\Registar.DomainModel.dll.config
+C:\odgoce\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\Registar.DomainModel.dll
+C:\odgoce\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\Registar.DomainModel.pdb
+C:\odgoce\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\obj\Debug\Registar.DomainModel.dll
+C:\odgoce\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\obj\Debug\Registar.DomainModel.pdb
+C:\odgoce\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\EntityFramework.dll
+C:\odgoce\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\odgoce\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\EntityFramework.xml
+C:\odgoce\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\EntityFramework.SqlServer.xml

@@ -1,0 +1,6 @@
+C:\odgoce\svs-talent-2015\04-SPA\Project\Registar\Registar.Common\bin\Debug\Registar.Common.dll
+C:\odgoce\svs-talent-2015\04-SPA\Project\Registar\Registar.Common\bin\Debug\Registar.Common.pdb
+C:\odgoce\svs-talent-2015\04-SPA\Project\Registar\Registar.Common\obj\Debug\Registar.Common.dll
+C:\odgoce\svs-talent-2015\04-SPA\Project\Registar\Registar.Common\obj\Debug\Registar.Common.pdb
+C:\odgoce\svs-talent-2015\04-SPA\Project\Registar\Registar.Common\bin\Debug\log4net.dll
+C:\odgoce\svs-talent-2015\04-SPA\Project\Registar\Registar.Common\bin\Debug\log4net.xml
