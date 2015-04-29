@@ -1,0 +1,7 @@
+C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.BL.Contracts\bin\Debug\Registar.BL.Contracts.dll
+C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.BL.Contracts\bin\Debug\Registar.BL.Contracts.pdb
+C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.BL.Contracts\bin\Debug\Registar.DomainModel.dll
+C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.BL.Contracts\bin\Debug\Registar.DomainModel.pdb
+C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.BL.Contracts\obj\Debug\Registar.BL.Contracts.csprojResolveAssemblyReference.cache
+C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.BL.Contracts\obj\Debug\Registar.BL.Contracts.dll
+C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.BL.Contracts\obj\Debug\Registar.BL.Contracts.pdb

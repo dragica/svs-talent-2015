@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using Registar.BusinessLayer;
 using Registar.BusinessLayer.Contracts;
 using Registar.Models;
-using Registar.DataLayer;
+using Registar.BL.Contracts.Contracts;
 
 namespace Registar.Controllers
 {
@@ -38,12 +38,33 @@ namespace Registar.Controllers
             return View("Index",_result);
         }
 
-        public ActionResult View1()
+        public ActionResult Create()
         {
-            RegistarDbContext context = new RegistarDbContext();
-            var model = context.Bikes.ToList();
+            return View();
+        }
 
-            return View(model);
+        // POST: CheckingAccount/Create
+        [HttpPost]
+        public ActionResult Create(Registar.DomainModel.Bike bike)
+        {
+            //try
+            //{
+                BikeCreateCommand _command = new BikeCreateCommand();
+                _command.BikeOwnerId = bike.BikeOwnerId;
+                _command.RegNumber = bike.RegNumber;
+                _command.Colour = bike.Colour;
+                _command.Producer = bike.Producer;
+                _command.Model = bike.Model;
+                BikeCreateResult _result = CommandInvoker.InvokeCommand<BikeCreateCommand, BikeCreateResult>(_command);
+                //
+                //return View(_result.Result);
+
+                return RedirectToAction("Index", "Home");
+            //}
+            //catch
+            //{
+            //    return View();
+            //}
         }
 
     }

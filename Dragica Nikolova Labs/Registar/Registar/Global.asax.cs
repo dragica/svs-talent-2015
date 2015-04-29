@@ -6,9 +6,8 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Registar.Common;
+using Registar.DataLayer;
 using Registar.Repository;
-using log4net;
-using log4net.Config;
 
 namespace Registar
 {
@@ -23,15 +22,16 @@ namespace Registar
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            XmlConfigurator.Configure();
 
             //Init
+            InitProjects();
         }
 
         private void InitProjects()
         {
             //
             RepositoryManager.RegisterFactory(new DefaultRepositoryFactory());
+            DataContextManager.RegisterContextFactory(new RegistarContextFactory());
         }
     }
 }

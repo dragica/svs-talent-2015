@@ -4,44 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Registar.BusinessLayer.Contracts;
+using Registar.Common;
 using Registar.DataLayer;
 using Registar.DomainModel;
+using Registar.Repository.Interfaces;
 
 namespace Registar.BusinessLayer.Handlers
 {
-    internal class BikeSearchCommandHandler:CommandHandlerBase<BikeSearchCommand,BikeSearchResult>
+    public class BikeSearchCommandHandler:CommandHandlerBase<BikeSearchCommand,BikeSearchResult>
     {
         protected override BikeSearchResult ExecuteCommand(BikeSearchCommand command)
         {
-            using (RegistarDbContext context = new RegistarDbContext())
-            {
-                //IEnumerable<Bike> bikes = new List<Bike>();
-                //bikes = context.Bikes
-                //        .OrderBy(p => p.BikeId)
-                //        .Take(10);
-                        //.ToList();
-                
-                var query = from b in context.Bikes
-                           select b;
-                
-                if (!string.IsNullOrEmpty(command.Colour))
-                {
-                    query = query.Where(x => x.Colour == command.Colour);
-                }
-                if (!string.IsNullOrEmpty(command.Producer))
-                {
-                    query = query.Where(x => x.Producer == command.Producer);
-                }
+            IBikeRepository repo = RepositoryManager.CreateRepository<IBikeRepository>();
+            //IUserRepository usrRepo = RepositoryManager.CreateRepository<IUserRepository>();
 
-                query = query
-                        .OrderBy(x => x.BikeId);
-                //
-                
-                BikeSearchResult result = new BikeSearchResult();
-                result.Result = query.ToList();
-                return result;
-            }
-            
+            BikeSearchResult result = new BikeSearchResult();
+            result.Result = repo.SearchBikes(command) as List<Bike>;
+            //
+            return result;
         }
     }
 }

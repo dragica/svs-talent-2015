@@ -18,7 +18,7 @@ namespace Registar.DataLayer
                 .HasKey(p => p.BikeId);
 
             this.Property(p => p.BikeId)
-                .HasColumnName("Id");
+                .HasColumnName("BikeId");
 
             //this.Ignore(p => p.IgnoreMe);
         }

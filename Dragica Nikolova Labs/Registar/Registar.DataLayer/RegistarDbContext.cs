@@ -5,14 +5,14 @@ using System.Data.Entity.Core.Metadata.Edm;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Registar.DataLayer.Interfaces;
 using Registar.DomainModel;
-
 
 namespace Registar.DataLayer
 {
-    public class RegistarDbContext : DbContext,
-        IRegistarDbContext
+    public class RegistarDbContext : DbContext, IRegistarContext
     {
+
         public IDbSet<Bike> Bikes { get; set; }
 
         public RegistarDbContext() : base("RegistarDb")

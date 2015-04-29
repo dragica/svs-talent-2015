@@ -1,0 +1,69 @@
+﻿@model Registar.DomainModel.Bike
+
+@{
+    ViewBag.Title = "Create";
+    //Layout = "~/Views/Shared/_PartialView.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Bike</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BikeOwnerId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BikeOwnerId)
+            @Html.ValidationMessageFor(model => model.BikeOwnerId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RegNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RegNumber)
+            @Html.ValidationMessageFor(model => model.RegNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Producer)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Producer)
+            @Html.ValidationMessageFor(model => model.Producer)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Model)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Model)
+            @Html.ValidationMessageFor(model => model.Model)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Colour)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Colour)
+            @Html.ValidationMessageFor(model => model.Colour)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@
