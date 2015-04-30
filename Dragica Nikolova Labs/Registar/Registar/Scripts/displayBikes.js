@@ -1,12 +1,13 @@
 $(document).ready(function () {
     $.ajax({
-        url: 'http://localhost:61322/home/getsearchresult',
-        type: 'POST',        
+        url: 'http://localhost:61322/home/index2',       
         dataType: 'json',
+        type: 'POST',
         cache: false,
         success: function (data) {
+            data = $.parseJSON(data);
             drawTable(data);
-            debugger;
+            //debugger;
         }        
     });
 });

@@ -30,8 +30,8 @@ namespace Registar.Controllers
 
         public ActionResult Index2()
         {
-            BikeSearchCommand _command = new BikeSearchCommand();
-            BikeSearchResult _result = CommandInvoker.InvokeCommand<BikeSearchCommand, BikeSearchResult>(_command);
+            //BikeSearchCommand _command = new BikeSearchCommand();
+            //BikeSearchResult _result = CommandInvoker.InvokeCommand<BikeSearchCommand, BikeSearchResult>(_command);
             //
 
             //return View(_result.Result);
@@ -56,7 +56,7 @@ namespace Registar.Controllers
                 
             return View();            
         }
-        [HttpPost]
+        [ActionName("Index2"), HttpPost]
         public ActionResult GetSearchResult()
         {
             BikeSearchCommand _command = new BikeSearchCommand();
@@ -65,7 +65,7 @@ namespace Registar.Controllers
             var serializer = new JavaScriptSerializer();
             var serializedResult = serializer.Serialize(_result.Result);
 
-            return Json(serializedResult,JsonRequestBehavior.AllowGet);  
+            return new JsonResult() { Data = serializedResult, JsonRequestBehavior = JsonRequestBehavior.AllowGet }; 
         }
 
     }
