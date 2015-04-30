@@ -5,3 +5,10 @@ C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.BL.Contracts\b
 C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.BL.Contracts\obj\Debug\Registar.BL.Contracts.csprojResolveAssemblyReference.cache
 C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.BL.Contracts\obj\Debug\Registar.BL.Contracts.dll
 C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.BL.Contracts\obj\Debug\Registar.BL.Contracts.pdb
+F:\regLastVersion\Registar\Registar.BL.Contracts\bin\Debug\Registar.BL.Contracts.dll
+F:\regLastVersion\Registar\Registar.BL.Contracts\bin\Debug\Registar.BL.Contracts.pdb
+F:\regLastVersion\Registar\Registar.BL.Contracts\bin\Debug\Registar.DomainModel.dll
+F:\regLastVersion\Registar\Registar.BL.Contracts\bin\Debug\Registar.DomainModel.pdb
+F:\regLastVersion\Registar\Registar.BL.Contracts\obj\Debug\Registar.BL.Contracts.csprojResolveAssemblyReference.cache
+F:\regLastVersion\Registar\Registar.BL.Contracts\obj\Debug\Registar.BL.Contracts.dll
+F:\regLastVersion\Registar\Registar.BL.Contracts\obj\Debug\Registar.BL.Contracts.pdb

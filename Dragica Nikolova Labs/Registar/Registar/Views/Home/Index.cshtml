@@ -4,25 +4,31 @@
     Layout = "../MasterPage.cshtml";
 }
 
-@section HeaderScripts
+@section RectangleArea
 {
-    <script type="text/javascript"></script>  
-    bla bla  
 }
 @this.Html.Partial("_PartialView")
-
 <table>
-    <tbody>
+    <tbody id="bikesBody">
         @foreach (var bike in this.Model)
         {
-            <tr>
+            <tr id="singleBike">
                 <td>@bike.RegNumber</td>
                 <td>@bike.Producer</td>
                 <td>@bike.Model</td>
                 <td>@bike.Colour</td>
                 <td>@this.ViewBag.SomeNewProperty</td>
-            </tr>                    
+            </tr>       
         }
 
     </tbody>
 </table>
+
+<input type="text" class="txtInput" id="txt1" />
+<input type="text" class="txtInput" id="txt2" /><br/><br />
+<button id="btnCalculate" onclick="getResult()">Calculate</button><br /> 
+<p id="result">With JavaScript: </p>
+<p id="result2"></p>
+
+
+

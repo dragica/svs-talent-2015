@@ -18,6 +18,11 @@ namespace Registar.BusinessLayer.Handlers
 
             BikeCreateResult result = new BikeCreateResult();
             result.Result = repo.CreateBikes(command) as Bike;
+            result.IsSuccess = false;
+            result.ValidationErrors = new List<string>();
+            result.ValidationErrors.Add("Not valid owner id");
+
+            IBikeRepository bikeRepo = RepositoryManager.CreateRepository<IBikeRepository>();
             //
             return result;
         }

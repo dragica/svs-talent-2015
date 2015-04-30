@@ -8,3 +8,13 @@ C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\bi
 C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\EntityFramework.xml
 C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\obj\Debug\Registar.DomainModel.csprojResolveAssemblyReference.cache
+F:\regLastVersion\Registar\Registar.DomainModel\bin\Debug\Registar.DomainModel.dll.config
+F:\regLastVersion\Registar\Registar.DomainModel\bin\Debug\Registar.DomainModel.dll
+F:\regLastVersion\Registar\Registar.DomainModel\bin\Debug\Registar.DomainModel.pdb
+F:\regLastVersion\Registar\Registar.DomainModel\bin\Debug\EntityFramework.dll
+F:\regLastVersion\Registar\Registar.DomainModel\bin\Debug\EntityFramework.SqlServer.dll
+F:\regLastVersion\Registar\Registar.DomainModel\bin\Debug\EntityFramework.xml
+F:\regLastVersion\Registar\Registar.DomainModel\bin\Debug\EntityFramework.SqlServer.xml
+F:\regLastVersion\Registar\Registar.DomainModel\obj\Debug\Registar.DomainModel.dll
+F:\regLastVersion\Registar\Registar.DomainModel\obj\Debug\Registar.DomainModel.pdb
+F:\regLastVersion\Registar\Registar.DomainModel\obj\Debug\Registar.DomainModel.csprojResolveAssemblyReference.cache

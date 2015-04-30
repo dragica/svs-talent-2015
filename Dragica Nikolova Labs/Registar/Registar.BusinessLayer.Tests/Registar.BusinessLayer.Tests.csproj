@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="BikeCreateCommandHandler.UnitTests.cs" />
     <Compile Include="BikeSearchCommandHandler.UnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -41,3 +41,89 @@ C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\System.Web
 C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\System.Web.WebPages.Razor.xml
 C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar\obj\Debug\Registar.dll
 C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar\obj\Debug\Registar.pdb
+F:\regLastVersion\Registar\Registar\bin\Registar.dll.config
+F:\regLastVersion\Registar\Registar\bin\Registar.dll
+F:\regLastVersion\Registar\Registar\bin\Registar.pdb
+F:\regLastVersion\Registar\Registar\bin\EntityFramework.dll
+F:\regLastVersion\Registar\Registar\bin\EntityFramework.SqlServer.dll
+F:\regLastVersion\Registar\Registar\bin\Microsoft.Web.Infrastructure.dll
+F:\regLastVersion\Registar\Registar\bin\Newtonsoft.Json.dll
+F:\regLastVersion\Registar\Registar\bin\Registar.BL.Contracts.dll
+F:\regLastVersion\Registar\Registar\bin\Registar.BusinessLayer.dll
+F:\regLastVersion\Registar\Registar\bin\Registar.Common.dll
+F:\regLastVersion\Registar\Registar\bin\Registar.DataLayer.dll
+F:\regLastVersion\Registar\Registar\bin\Registar.DomainModel.dll
+F:\regLastVersion\Registar\Registar\bin\Registar.Repository.dll
+F:\regLastVersion\Registar\Registar\bin\System.Web.Helpers.dll
+F:\regLastVersion\Registar\Registar\bin\System.Web.Razor.dll
+F:\regLastVersion\Registar\Registar\bin\System.Web.WebPages.Deployment.dll
+F:\regLastVersion\Registar\Registar\bin\System.Web.WebPages.dll
+F:\regLastVersion\Registar\Registar\bin\System.Web.WebPages.Razor.dll
+F:\regLastVersion\Registar\Registar\bin\Registar.BL.Contracts.pdb
+F:\regLastVersion\Registar\Registar\bin\Registar.BusinessLayer.pdb
+F:\regLastVersion\Registar\Registar\bin\Registar.Common.pdb
+F:\regLastVersion\Registar\Registar\bin\Registar.DataLayer.pdb
+F:\regLastVersion\Registar\Registar\bin\Registar.DomainModel.pdb
+F:\regLastVersion\Registar\Registar\bin\Registar.Repository.pdb
+F:\regLastVersion\Registar\Registar\bin\EntityFramework.xml
+F:\regLastVersion\Registar\Registar\bin\EntityFramework.SqlServer.xml
+F:\regLastVersion\Registar\Registar\bin\Microsoft.Web.Infrastructure.xml
+F:\regLastVersion\Registar\Registar\bin\System.Web.Helpers.xml
+F:\regLastVersion\Registar\Registar\bin\System.Web.Razor.xml
+F:\regLastVersion\Registar\Registar\bin\System.Web.WebPages.xml
+F:\regLastVersion\Registar\Registar\bin\System.Web.WebPages.Deployment.xml
+F:\regLastVersion\Registar\Registar\bin\System.Web.WebPages.Razor.xml
+F:\regLastVersion\Registar\Registar\obj\Debug\Registar.csprojResolveAssemblyReference.cache
+F:\regLastVersion\Registar\Registar\obj\Debug\Registar.dll
+F:\regLastVersion\Registar\Registar\obj\Debug\Registar.pdb
+F:\regLastVersion\Registar\Registar\bin\System.Net.Http.Formatting.dll
+F:\regLastVersion\Registar\Registar\bin\System.Web.Http.dll
+F:\regLastVersion\Registar\Registar\bin\System.Web.Http.WebHost.dll
+F:\regLastVersion\Registar\Registar\bin\System.Web.Mvc.dll
+F:\regLastVersion\Registar\Registar\bin\System.Net.Http.Formatting.xml
+F:\regLastVersion\Registar\Registar\bin\System.Web.Http.xml
+F:\regLastVersion\Registar\Registar\bin\System.Web.Http.WebHost.xml
+F:\regLastVersion\Registar\Registar\bin\System.Web.Mvc.xml
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\Registar.dll.config
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\Registar.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\Registar.pdb
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\EntityFramework.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\EntityFramework.SqlServer.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\Microsoft.Web.Infrastructure.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\Newtonsoft.Json.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\Registar.BL.Contracts.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\Registar.BusinessLayer.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\Registar.Common.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\Registar.DataLayer.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\Registar.DomainModel.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\Registar.Repository.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\System.Net.Http.Formatting.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\System.Web.Helpers.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\System.Web.Http.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\System.Web.Http.WebHost.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\System.Web.Mvc.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\System.Web.Razor.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\System.Web.WebPages.Deployment.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\System.Web.WebPages.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\System.Web.WebPages.Razor.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\Registar.BL.Contracts.pdb
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\Registar.BusinessLayer.pdb
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\Registar.Common.pdb
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\Registar.DataLayer.pdb
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\Registar.DomainModel.pdb
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\Registar.Repository.pdb
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\EntityFramework.xml
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\EntityFramework.SqlServer.xml
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\Microsoft.Web.Infrastructure.xml
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\System.Net.Http.Formatting.xml
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\System.Web.Helpers.xml
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\System.Web.Http.xml
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\System.Web.Http.WebHost.xml
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\System.Web.Mvc.xml
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\System.Web.Razor.xml
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\System.Web.WebPages.xml
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\System.Web.WebPages.Deployment.xml
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\bin\System.Web.WebPages.Razor.xml
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\obj\Debug\Registar.csprojResolveAssemblyReference.cache
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\obj\Debug\Registar.dll
+D:\SeavusTraining\github\svs-talent-2015\Dragica Nikolova Labs\Registar\Registar\obj\Debug\Registar.pdb

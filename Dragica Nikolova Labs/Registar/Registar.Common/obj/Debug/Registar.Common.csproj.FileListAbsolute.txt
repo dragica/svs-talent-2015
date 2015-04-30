@@ -3,3 +3,8 @@ C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.Common\bin\Deb
 C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.Common\obj\Debug\Registar.Common.dll
 C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.Common\obj\Debug\Registar.Common.pdb
 C:\Users\Dragica\svs-talent-2015\04-SPA\Project\Registar\Registar.Common\obj\Debug\Registar.Common.csprojResolveAssemblyReference.cache
+F:\regLastVersion\Registar\Registar.Common\bin\Debug\Registar.Common.dll
+F:\regLastVersion\Registar\Registar.Common\bin\Debug\Registar.Common.pdb
+F:\regLastVersion\Registar\Registar.Common\obj\Debug\Registar.Common.dll
+F:\regLastVersion\Registar\Registar.Common\obj\Debug\Registar.Common.pdb
+F:\regLastVersion\Registar\Registar.Common\obj\Debug\Registar.Common.csprojResolveAssemblyReference.cache

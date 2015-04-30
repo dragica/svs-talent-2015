@@ -7,6 +7,7 @@ using Registar.BusinessLayer;
 using Registar.BusinessLayer.Contracts;
 using Registar.Models;
 using Registar.BL.Contracts.Contracts;
+using System.Web.Script.Serialization;
 
 namespace Registar.Controllers
 {
@@ -21,21 +22,20 @@ namespace Registar.Controllers
             BikeSearchCommand _command = new BikeSearchCommand();
             BikeSearchResult _result = CommandInvoker.InvokeCommand<BikeSearchCommand, BikeSearchResult>(_command);
             //
+            
             return View(_result.Result);
+            //return View();
+
         }
 
         public ActionResult Index2()
         {
-            List<BikeModel> _result = new List<BikeModel>();
-            _result.Add(new BikeModel() { Colour = "red", Model = "R1", Producer = "Specialized", RegNumber = "007" });
-            _result.Add(new BikeModel() { Colour = "red", Model = "R1", Producer = "Specialized", RegNumber = "007" });
-            _result.Add(new BikeModel() { Colour = "red", Model = "R1", Producer = "Specialized", RegNumber = "007" });
-            _result.Add(new BikeModel() { Colour = "red", Model = "R1", Producer = "Specialized", RegNumber = "007" });
+            BikeSearchCommand _command = new BikeSearchCommand();
+            BikeSearchResult _result = CommandInvoker.InvokeCommand<BikeSearchCommand, BikeSearchResult>(_command);
             //
-            this.ViewBag.SomeNewProperty = "theValue";
-            this.ViewData["SomeNewProperty"] = "theValue";
-            //
-            return View("Index",_result);
+
+            //return View(_result.Result);
+            return View();
         }
 
         public ActionResult Create()
@@ -43,28 +43,29 @@ namespace Registar.Controllers
             return View();
         }
 
-        // POST: CheckingAccount/Create
         [HttpPost]
         public ActionResult Create(Registar.DomainModel.Bike bike)
         {
-            //try
-            //{
-                BikeCreateCommand _command = new BikeCreateCommand();
-                _command.BikeOwnerId = bike.BikeOwnerId;
-                _command.RegNumber = bike.RegNumber;
-                _command.Colour = bike.Colour;
-                _command.Producer = bike.Producer;
-                _command.Model = bike.Model;
-                BikeCreateResult _result = CommandInvoker.InvokeCommand<BikeCreateCommand, BikeCreateResult>(_command);
-                //
-                //return View(_result.Result);
+            BikeCreateCommand _command = new BikeCreateCommand();
+            _command.BikeOwnerId = bike.BikeOwnerId;
+            _command.RegNumber = bike.RegNumber;
+            _command.Colour = bike.Colour;
+            _command.Producer = bike.Producer;
+            _command.Model = bike.Model;
+            BikeCreateResult _result = CommandInvoker.InvokeCommand<BikeCreateCommand, BikeCreateResult>(_command);
+                
+            return View();            
+        }
+        [HttpPost]
+        public ActionResult GetSearchResult()
+        {
+            BikeSearchCommand _command = new BikeSearchCommand();
+            BikeSearchResult _result = CommandInvoker.InvokeCommand<BikeSearchCommand, BikeSearchResult>(_command);
 
-                return RedirectToAction("Index", "Home");
-            //}
-            //catch
-            //{
-            //    return View();
-            //}
+            var serializer = new JavaScriptSerializer();
+            var serializedResult = serializer.Serialize(_result.Result);
+
+            return Json(serializedResult,JsonRequestBehavior.AllowGet);  
         }
 
     }
